@@ -1,0 +1,721 @@
+/* ***************** */
+/* ***BASIC SETUP*** */
+/* ***************** */
+
+*{
+	margin    : 0;
+	padding   : 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Titillium Web', sans-serif;
+	line-height: 1.3;
+	font-size: 1.6rem;
+}
+
+ul li {
+	list-style-type: none;
+}
+:focus{
+	outline: 0;
+}
+/* ************************* */
+/* ***REUSABLE COMPONENTS*** */
+/* ************************* */
+
+.row{
+	max-width: 114rem;
+	margin   : 0 auto;
+}
+
+section{
+	padding: 8rem 0;
+}
+
+h2{
+	font-size: 4rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-top: 0;
+	color: #fff;
+	margin-bottom: 2rem;
+}
+
+h2::after {
+	content: "";
+	display: block;
+	height: 0.4rem;
+	background: #32f3d1;
+	width: 8.5rem;
+	margin: auto;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+h3{
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+h4{
+	font-size: 1.8rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-top: 2.5rem;
+}
+
+.box{
+	padding: 1%;
+}
+
+.box p{
+	font-size: 1.6rem;
+	font-weight: 300;
+	margin-top: 2rem;
+}
+
+/* ***Paragraph*** */
+.little-discription{
+	font-size: 1.8rem;
+	width: 60%;
+	margin-left: 20%;
+	line-height: 3rem;
+}
+
+/* ***BUTTON*** */
+
+.btn:link,
+.btn:visited,
+.btn {
+	background     : #333;
+	border-bottom  : 0.3rem solid #000;
+	text-decoration: none;
+	text-transform : uppercase;
+	padding        : 1.6rem 4rem;
+	border-radius  : 0.3rem;
+	display        : inline-block;
+	margin-top     : 4.5rem;
+	-webkit-transition     : 0.4s;
+	-o-transition     : 0.4s;
+	transition     : 0.4s;
+	-webkit-box-shadow     : 0rem 0rem 0.7rem -0.2rem #2e0046;
+	        box-shadow     : 0rem 0rem 0.7rem -0.2rem #2e0046;
+	font-size      : 1.6rem;
+}
+
+
+/* ***HEADER*** */
+
+h1{
+	font-size  : 4.2rem;
+	color      : #fff;
+	text-shadow: 0.5rem 0.7rem 1.1rem #2e0046;
+}
+
+.clearfix::after{
+	content   : "";
+	display   : block;
+	clear     : both;
+	height    : 0;
+	visibility: hidden;
+}
+
+/* ******************** */
+/* ***HEADER SECTION*** */
+/* ******************** */
+
+header{
+	background         : -webkit-gradient(linear, left top, left bottom, from(rgba(135, 80, 156, 0.3)), to(rgba(135, 80, 156, 0.8))),url(img/service.jpg);
+	background         : -o-linear-gradient(rgba(135, 80, 156, 0.3), rgba(135, 80, 156, 0.8)),url(img/service.jpg);
+	background         : linear-gradient(rgba(135, 80, 156, 0.3), rgba(135, 80, 156, 0.8)),url(img/service.jpg);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center top;
+	height             : 85vh;
+	position           : relative;
+	background-attachment: fixed;
+}
+
+.logo{
+	height    : 3.5rem;
+	width     : auto;
+	margin-top: 3.5rem;
+	float     : left;
+}
+
+/* ***MAIN NAV*** */
+
+.main-nav{
+	float     : right;
+	margin-top: 4rem;
+}
+
+.main-nav li{
+	display    : inline-block;
+	margin-left: 1rem;
+}
+
+.main-nav li:first-child{
+
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+	color          : #fff;
+	text-decoration: none;
+	text-transform : uppercase;
+	background     : rgba(100,58,121,0);
+	padding        : 0.4rem 1.6rem;
+	border-radius  : 0.3rem;
+	display        : inline-block;
+	font-size      : 1.6rem;
+	-webkit-transition     : .3s;
+	-o-transition     : .3s;
+	transition     : .3s;
+}
+
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited {
+	background: rgba(100,58,121,1)
+}
+
+.main-nav .active{
+	background   : rgba(100,58,121,1);
+	border-radius: 0.3rem;
+}
+
+/*STICKY NAVAGTION*/
+.sticky{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(135, 80, 156, 0.9);
+	padding: 1rem 0;
+	-webkit-box-shadow: 0rem 0rem 1.7rem -0.2rem rgba(255, 255, 255, 0.9);
+	        box-shadow: 0rem 0rem 1.7rem -0.2rem rgba(255, 255, 255, 0.9);
+	z-index:9999;
+}
+
+.sticky .logo,
+.sticky .main-nav{
+	margin-top:.2rem;
+}
+
+/* MOBILE MENU*/
+.mobile-menu span{
+	color: #fff;
+	font-size: 4rem;
+	float: right;
+	margin-top: 2rem;
+	cursor: pointer;
+	display: none;
+}
+
+.overlay{
+	width: 0;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 1;
+	overflow-x:hidden;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+
+.overlay-content{
+	position: relative;
+	top: 3%;
+	width: 100%;
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.overlay-content a{
+	text-decoration: none;
+	display: block;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	color: #999;
+	padding: 1rem 0;
+}
+
+.overlay-content a:hover{
+	color: #fff;
+}
+
+.closebtn {
+	position: absolute;
+	top: 0rem;
+	right: 4.5rem;
+	text-decoration: none;
+	font-size: 4.5rem;
+	color: #999;
+}
+
+.closebtn:hover{
+	color: #fff;
+}
+
+.sticky .mobile-menu span{
+	margin: 0;
+}
+
+.hero-text-box{
+	position  : absolute;
+	top       : 50%;
+	left      : 50%;
+	width     : 80%;
+	-webkit-transform : translate(-50%, -50%);
+	    -ms-transform : translate(-50%, -50%);
+	        transform : translate(-50%, -50%);
+	text-align: center;
+	width: 114rem;
+}
+
+.btn-hero:link,
+.btn-hero:visited {
+	background  : #eb7d4b;
+	border-color: #c86a40;
+	color       : #fff;
+}
+
+.btn-hero:hover{
+	-webkit-box-shadow: 0rem 0rem 9rem -1rem #2e0046;
+	        box-shadow: 0rem 0rem 9rem -1rem #2e0046;
+	background: #e28536;
+}
+
+
+/* ********************** */
+/* ***SERVICES SECTION*** */
+/* ********************** */
+
+.services-section{
+	color: #fff;
+	text-align: center;
+	background         : -webkit-gradient(linear, left top, left bottom, from(rgba(23,194,164,.7)), to(rgba(23,194,164,1))),url(img/team2.jpg);
+	background         : -o-linear-gradient(rgba(23,194,164,.7), rgba(23,194,164,1)),url(img/team2.jpg);
+	background         : linear-gradient(rgba(23,194,164,.7), rgba(23,194,164,1)),url(img/team2.jpg);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center top;
+}
+
+.services-icon{
+	height: 12rem;
+	margin-top: 4.5rem;
+	margin-bottom: 3.5rem;
+}
+
+/* ****************** */
+/* ***TEAM SECTION*** */
+/* ****************** */
+
+.team-section{
+	text-align: center;
+	background         : -webkit-gradient(linear, left top, left bottom, from(rgba(231,241,248,.8)), to(rgba(231,241,248,.9))),url(img/team6.jpg);
+	background         : -o-linear-gradient(rgba(231,241,248,.8), rgba(231,241,248,.9)),url(img/team6.jpg);
+	background         : linear-gradient(rgba(231,241,248,.8), rgba(231,241,248,.9)),url(img/team6.jpg);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+.team-section h2{
+	color: #3c4761;
+}
+
+.team-section h2::after {
+	background: #94989a;
+}
+
+.team-member{
+	margin-top: 4.5rem;
+	margin-bottom: 3.5rem;
+	height: 20rem;
+	width: 20rem;
+	border-radius: 50%;
+}
+
+.team-section h3{
+	color: #8e9496;
+}
+
+.role{
+	color: #30bae7;
+	font-size: 1.6rem;
+	text-transform: capitalize;
+	margin-top: .5rem;
+	display: inline-block;
+}
+
+.team-section .box p{
+	color: #3c4761;
+}
+
+
+.social{
+	margin-top: 4.5rem;
+}
+
+.social ul li{
+	display: inline-block;
+	padding: 0 .5rem;
+}
+
+.social ul li a:link{
+	color: #fff;
+}
+
+.fa, .fab, .fal, .far, .fas, .social-link {
+    color: #fff;
+}
+
+.social ul li a:link i::before{
+	background: #bdd1df;
+	width: 2rem;
+	height: 2rem;
+	padding: 1rem;
+	border-radius: 50%;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	display: inline-block;
+	font-size: 1.8rem;
+}
+
+.social ul li a:hover i::before{
+	background: #393939;
+	-webkit-transform: rotate(360deg);
+	    -ms-transform: rotate(360deg);
+	        transform: rotate(360deg);
+}
+
+/* ******************* */
+/* ***SKILL SECTION*** */
+/* ******************* */
+/* Start Animited Circle */
+svg.radial-progress {
+  height: auto;
+  max-width: 200px;
+  padding: 1em;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  width: 100%;
+}
+
+svg.radial-progress circle {
+  fill: rgba(0,0,0,0);
+  stroke: #fff;
+  stroke-dashoffset: 219.91148575129; 
+  stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete { opacity: 0.25; }
+
+svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; }
+
+svg.radial-progress text {
+  fill: #fff;
+  text-anchor: middle;
+}
+/* End Animited Circle */
+
+.skill-section{
+	color: #3c4761;
+	text-align: center;
+	background         : -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.8)), to(rgba(255,255,255,.9))),url(img/4.jpg);
+	background         : -o-linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.9)),url(img/4.jpg);
+	background         : linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.9)),url(img/4.jpg);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center top;
+}
+
+.skill-section h2{
+	color: #3c4761;
+}
+
+.skill-section h2::after{
+	background: #dfe8ed;
+}
+
+.skill-section .box{
+	margin-top: 4.5rem;
+}
+
+svg.radial-progress circle {
+	stroke-width: 5;
+
+}
+
+svg.radial-progress text{
+	fill: #3c4761;
+	font-size: 1.5rem;
+}
+
+svg.web-desing circle {
+	stroke: #30BAE7;
+}
+
+svg.html-css circle {
+	stroke: #D74680;
+}
+
+svg.graphic-desing circle {
+	stroke: #15C7A8;
+}
+
+svg.ui-ux circle {
+	stroke: #EB7D4B;
+}
+
+
+/* *********************** */
+/* ***PORTFOLIO SECTION*** */
+/* *********************** */
+
+.Portfolio-section{
+	color: #393939;
+	text-align: center;
+	background         : -webkit-gradient(linear, left top, left bottom, from(rgba(255, 221, 153,.8)), to(rgba(255, 221, 153,.8))),url(img/team7.jpg);
+	background         : -o-linear-gradient(rgba(255, 221, 153,.8), rgba(255, 221, 153,.8)),url(img/team7.jpg);
+	background         : linear-gradient(rgba(255, 221, 153,.8), rgba(255, 221, 153,.8)),url(img/team7.jpg);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center ;
+	background-attachment: fixed;
+}
+
+.Portfolio-section h2{
+	color: #393939;
+}
+
+.Portfolio-section h2::after{
+	background-color: #E5C37F;
+}
+
+.portfolio-filter{
+	margin: 4.5rem 0;
+}
+
+.portfolio-filter button{
+	background: #EBC985;
+	font-size: 1.8rem;
+	padding: 1rem 2rem;
+	border: 0;
+	border-radius: .5rem;
+	text-transform: uppercase;
+	color: #393939;
+	margin: 1rem .5rem;
+	font-weight: 400;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.portfolio-filter button:hover {
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 0.3rem 0.5rem rgba(60,71,97,.5);
+	        box-shadow: inset 0 0.3rem 0.5rem rgba(60,71,97,.5);
+}
+
+.portfolio-img{
+	width: 100%;
+	height: auto;
+}
+
+.Portfolio-section .col:nth-child(3) {
+	margin-left: 0;
+}
+
+.Portfolio-section .btn-load-more {
+	background: #17C2A4;
+	border-color: #14A58C;
+	color: #fff;
+	font-weight: 600;
+	display: inline-block;
+}
+
+.container{
+	overflow: hidden;
+}
+
+.Portfolio-section .mixitup-control-active{
+	background:#fff;
+}
+
+/* ************************* */
+/* ***TASTIMONIAL SECTION*** */
+/* ************************* */
+
+.tastimonial{
+	color: #fff;
+	background         : -webkit-gradient(linear, left top, left bottom, from(rgba(215,70,128,.9)), to(rgba(215,70,128,.9))),url(img/7.jpg);
+	background         : -o-linear-gradient(rgba(215,70,128,.9), rgba(215,70,128,.9)),url(img/7.jpg);
+	background         : linear-gradient(rgba(215,70,128,.9), rgba(215,70,128,.9)),url(img/7.jpg);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center ;
+}
+
+.tastimonial .col{
+	margin: 1.6% 0.2%;
+}
+
+.tastimonial h2::after{
+	background-color: #B73C6D;
+}
+
+.tastimonial .little-discription, h2{
+	text-align: center;
+	color: #fff;
+}
+
+.client-photo{
+	width: 10rem;
+	float: left;
+}
+
+.tastimonial .client-photo img{
+	height: 8rem;
+	border-radius: 50%;
+	margin-bottom: 3rem;
+}
+
+.client-review{
+	float: left;
+	width: 35rem;
+}
+
+.client-review p{
+	font-size: 2.1rem;
+	font-weight: 300;
+	font-style: italic;
+	margin-top: 0;
+	margin-bottom: 2rem;
+	color: #fff;
+}
+
+.client-review .role{
+	color: #FFDD99;
+}
+
+/* ********************* */
+/* ***CONTACT SECTION*** */
+/* ********************* */
+
+.contact-section{
+	color: #fff;
+	text-align: center;
+	background         : -webkit-gradient(linear, left top, left bottom, from(rgba(60, 84, 153, .8)), to(rgba(60, 84, 153, .8))),url(img/5.png);
+	background         : -o-linear-gradient(rgba(60, 84, 153, .8), rgba(60, 84, 153, .8)),url(img/5.png);
+	background         : linear-gradient(rgba(60, 84, 153, .8), rgba(60, 84, 153, .8)),url(img/5.png);
+	background-repeat  : no-repeat;
+	background-size    : cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+.contact-section h2:after{
+	background: #273A71;
+}
+
+
+.contact-section form {
+    margin-top: 5rem;
+    width: 70%;
+    display: inline-block;
+}
+
+.contact-section input[type=email], 
+.contact-section input[type=text], 
+.contact-section textarea {
+    background: #273a71;
+    border: .1rem solid #273a71;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: .5rem 0;
+}
+
+.contact-section form ::-webkit-input-placeholder{
+	color: #fff;
+}
+
+.contact-section form ::-moz-placeholder{
+	color: #fff;
+}
+
+.contact-section form :-ms-input-placeholder{
+	color: #fff;
+}
+
+.contact-section form ::-ms-input-placeholder{
+	color: #fff;
+}
+
+.contact-section form ::placeholder{
+	color: #fff;
+}
+
+.btn-submit {
+	border:0;
+}
+
+.btn-submit {
+	background: #30BAE7;
+	color: #fff;
+	font-weight: 600;
+	border-bottom: .3rem solid #299EC5;
+	display: inline-block;
+	cursor: pointer;
+}
+
+/* ******************** */
+/* ***FOOTER SECTION*** */
+/* ******************** */
+.footer-section{
+	background: #344B8E;
+	padding: 3rem 0;
+	text-align: center;
+	border-top: .1rem solid rgba(255, 255, 255, 0.4);
+}
+
+.footer-section li{
+	display: inline-block;
+	margin: 0 2rem;
+
+}
+
+.footer-section li a{
+	text-decoration: none;
+	text-transform : capitalize;
+	color          : #fff;
+	font-size      : 2.4rem;
+}
+
+.footer-section li a:hover{
+	color: #319CCF;
+}
+
+.contact-section .name{
+	margin-left: 0;
+}
