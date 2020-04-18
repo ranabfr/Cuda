@@ -57,8 +57,9 @@
 		width: 49.2%;
 	}
 	
-
-	
+	.services-section .span_1_of_4{
+		width: 45.2%;
+	}
 
 	}
 	.span_1_of_4:nth-child(3) {
