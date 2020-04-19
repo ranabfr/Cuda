@@ -1,151 +1,128 @@
-@media only screen and (max-width: 1200px){
-	header{
-		height: 65vh;
-	}
-		header .row{
-		margin: 0 1.5rem;
-	}
+@media only screen and (max-width:1200px) {
+    header {
+        height: 65vh
+    }
+    header .row {
+        margin: 0 15px
 
-	.hero-text-box{
-		width: 90%;
-	}
+    }
+    .hero-text-box {
+        width: 90%
+    }
 }
 
-@media only screen and (max-width: 1024px){
-	.mobile-menu span{
-		display: block;
-	}
-	header{
-		height: 55vh;
-	}
+@media only screen and (max-width:1024px) {
+    .mobile-menu span {
+        display: block
+    }
+    header {
+        height: 55vh
+    }
+    .main-nav {
+        display: none
+    }
+    html {
+        font-size: 57.5%
+    }
+    .client-photo {
+        width: 100%;
+        float: none;
+        text-align: center
+    }
+    .client-review {
+        width: 100%;
+        float: none;
+        text-align: center
+    }
+    .contact-section form {
+        width: 100%;
+        margin-left: 0;
+    }
+}
 
-	.hero-text-box{
-		width: 90%;
-	}
-	.main-nav{
-		display: none;
-	}
-	html{
-		font-size: 57.5%;
-		width:100%
-	}
-	.team-section{
-		width: 100%;
-	}
+@media only screen and (max-width:980px) {
+    .span_1_of_4 {
+        width: 49.2%
+    }
+    .span_1_of_4:nth-child(3) {
+        margin-left: 0
+    }
+    html {
+        font-size: 62.5%
+    }
+}
 
-	.client-photo{
-		width: 100%;
-		float: none;
-		text-align: center;
-	}
-	.client-review{
-		width: 100%;
-		float: none;
-		text-align: center;
-	}
-	
-	.contact-section form{
+@media only screen and (max-width:768px) {
+    header {
+        height: 60vh
+    }
+    .little-description {
+        width: 100%;
+        margin-left: 0
+    }
+    h1 {
+        font-size: 3.5rem
+    }
+    h2 {
+        font-size: 3rem
+    }
+    h3 {
+        font-size: 2rem
+    }
+    .tastimonial .span_1_of_2{
+    	text-align: center;
+    }
+    .tastimonial .client-photo{
+    	width: 100%;
+    	float: none;
+    	text-align: center;
+    }
+
+    .contact-section form{
 		width: 90%;
 		margin: auto;
 		text-align: center;
 	}
 }
 
-@media only screen and (max-width: 980px){
-	
-	.span_1_of_4{
-		width: 49.2%;
+@media only screen and (max-width:583px){
+	.Portfolio-section .container .span_1_of_2 {
+		padding: 0;
+		margin-top: 2rem;
 	}
-	.span_1_of_4:nth-child(3) {
-		margin-left: 0;
-	}
-	html{
-		font-size: 62.5%;
-	}
-}
-
-@media only screen and (max-width: 962px){
-	.tastimonial .span_1_of_2 {
-		width: 44%;
-		text-align: center;
-	}
-}
-
-@media only screen and (max-width: 780px){
-	.little-discription{
-		width: 100%;
-		margin: auto;
-	}
-	h1{
-		font-size: 3.5rem;
-	}
-	h2{
-		font-size: 3rem;
-	}
-	h3{
-		font-size: 2rem;
-	}
-}
-@media only screen and (max-width: 586px){
-	.services-section .span_1_of_4{
-		width: 47.5%;
-	}
-}
-@media only screen and (max-width: 480px){
-	.span_1_of_4{
-		width: 100%;
-	}
-	h1{
-		font-size: 3rem;
-	}
-	h2{
-		font-size: 2.5rem;
-	}
-	h3{
-		font-size: 1.5rem;
-	}
-	.btn-hero:link, 
-	.btn-hero:visited{
-		margin-top: 0rem;
-		margin-bottom: 1.5rem;
-	}
-	header{
-		height: 50vh;
-	}
-	.hero-text-box{
-		position: absolute;
-		bottom: 0%;
+	.Portfolio-section .container .span_1_of_2 h4{
+	margin-top: 0.5
 	}
 	.services-section .span_1_of_4{
+		padding: 0;
+	}
+
+	.tastimonial .span_1_of_2{
+		width: 45%;
+	}
+}
+
+@media only screen and (max-width:480px) {
+    header {
+        height: 85vh
+    }
+    .span_1_of_4 {
+        width: 100%
+    }
+    h1 {
+        font-size: 3rem
+    }
+    h2 {
+        font-size: 2.5rem
+    }
+    h3 {
+        font-size: 2rem
+    }
+    .testimonial .col:nth-child(3),
+    .testimonial .col:nth-child(4) {
+        margin-top: 4rem
+    }
+    .tastimonial .span_1_of_2{
 		width: 100%;
-}
-
-@media only screen and (max-width: 375px){
-
-	header{
-		height: 60vh;
-	}
-	.hero-text-box{
-		position: absolute;
-		bottom: 0;
 	}
 }
-
-@media only screen and (max-width: 360px){
-	h1{
-		font-size: 2rem;
-	}
-	.btn-hero:link, 
-	.btn-hero:visited{
-		margin-top: 1rem;
-		margin-bottom: 1.5rem;
-	}
-	header{
-		height: 50vh;
-	}
-	.hero-text-box{
-		position: absolute;
-		bottom: 15%;
-	}
-}
-
