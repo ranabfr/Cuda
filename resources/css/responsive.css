@@ -52,13 +52,8 @@
 }
 
 @media only screen and (max-width: 980px){
-	.services-section{
-	  width: 100%;
-	  text-align: center;
-	  margin: auto;
-	}
 	.services-section .span_1_of_4{
-		width: 46.2%;
+		width: 45.2%;
 		text-align: center;
 		margin: auto;
 	}
