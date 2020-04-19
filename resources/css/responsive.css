@@ -56,16 +56,6 @@
 	.span_1_of_4{
 		width: 49.2%;
 	}
-	.services-section{
-	  width: 100%;
-	  text-align: center;
-	  margin: auto;
-	}
-	.services-section .span_1_of_4{
-		width: 46.2%;
-		text-align: center;
-		margin: auto;
-	}
 
 	}
 	.span_1_of_4:nth-child(3) {
