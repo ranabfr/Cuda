@@ -107,7 +107,7 @@
 	.btn-hero:link, 
 	.btn-hero:visited{
 		margin-top: 0rem;
-		margin-bottom: 0rem;
+		margin-bottom: 1.5rem;
 	}
 	header{
 		height: 50vh;
@@ -138,7 +138,7 @@
 	.btn-hero:link, 
 	.btn-hero:visited{
 		margin-top: 1rem;
-		margin-bottom: 0rem;
+		margin-bottom: 1.5rem;
 	}
 	header{
 		height: 50vh;
